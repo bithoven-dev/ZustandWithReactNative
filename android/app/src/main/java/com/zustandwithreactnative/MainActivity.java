@@ -1,4 +1,4 @@
-package com.reactnavigationauthenticationflowswithhooks;
+package com.zustandwithreactnative;
 
 import com.facebook.react.ReactActivity;
 
