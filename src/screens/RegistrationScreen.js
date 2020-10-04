@@ -7,11 +7,11 @@ import {FilledButton} from '../components/FilledButton';
 import {Error} from '../components/Error';
 import {IconButton} from '../components/IconButton';
 import {AuthContainer} from '../components/AuthContainer';
-import {AuthContext} from '../contexts/AuthContext';
 import {Loading} from '../components/Loading';
+import {useUserStore} from '../stores/userStore';
 
 export function RegistrationScreen({navigation}) {
-  const {register} = React.useContext(AuthContext);
+  const register = useUserStore(state => state.register);
   const [email, setEmail] = React.useState('bithovendev@gmail.com');
   const [password, setPassword] = React.useState('abc');
   const [loading, setLoading] = React.useState(false);

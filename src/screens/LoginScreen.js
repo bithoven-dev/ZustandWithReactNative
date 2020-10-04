@@ -7,11 +7,11 @@ import {FilledButton} from '../components/FilledButton';
 import {TextButton} from '../components/TextButton';
 import {Error} from '../components/Error';
 import {AuthContainer} from '../components/AuthContainer';
-import {AuthContext} from '../contexts/AuthContext';
 import {Loading} from '../components/Loading';
+import {useUserStore} from '../stores/userStore';
 
 export function LoginScreen({navigation}) {
-  const {login} = React.useContext(AuthContext);
+  const login = useUserStore(state => state.login);
   const [email, setEmail] = React.useState('bithovendev@gmail.com');
   const [password, setPassword] = React.useState('abc');
   const [loading, setLoading] = React.useState(false);
